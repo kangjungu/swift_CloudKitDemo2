@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CloudKitDemo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQd-En-w3z">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-D6-4HJ">
+                                <rect key="frame" x="20" y="66" width="560" height="133"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="dbm-zE-zDj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-aJ-njl">
+                                <rect key="frame" x="20" y="207" width="560" height="257"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-QI-rXe">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Save" id="F5S-oU-bVD">
+                                        <connections>
+                                            <action selector="saveRecord:" destination="BYZ-38-t0r" id="4E1-pM-8zE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Query" id="jb8-dv-jmI">
+                                        <connections>
+                                            <action selector="performQuery:" destination="BYZ-38-t0r" id="Y9j-1B-sro"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Photo" id="eVN-5W-Mq4">
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="BYZ-38-t0r" id="1ai-uI-RgH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Update" id="HYR-I3-z1T">
+                                        <connections>
+                                            <action selector="updateRecord:" destination="BYZ-38-t0r" id="TAO-Ns-QGA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Delete" id="6bO-Hx-PEY">
+                                        <connections>
+                                            <action selector="deleteRecord:" destination="BYZ-38-t0r" id="UY9-6R-EJE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jQd-En-w3z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="0fG-aJ-4iO"/>
+                            <constraint firstItem="mfc-D6-4HJ" firstAttribute="trailing" secondItem="Zpd-aJ-njl" secondAttribute="trailing" id="0wc-cb-QRz"/>
+                            <constraint firstItem="jQd-En-w3z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="INO-9c-xWs"/>
+                            <constraint firstItem="hJX-QI-rXe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RZg-nK-b81"/>
+                            <constraint firstItem="hJX-QI-rXe" firstAttribute="top" secondItem="Zpd-aJ-njl" secondAttribute="bottom" constant="92" id="URq-ux-uAM"/>
+                            <constraint firstItem="Zpd-aJ-njl" firstAttribute="centerX" secondItem="hJX-QI-rXe" secondAttribute="centerX" id="fK1-gV-Hg9"/>
+                            <constraint firstItem="jQd-En-w3z" firstAttribute="trailing" secondItem="mfc-D6-4HJ" secondAttribute="trailing" id="il4-eW-m2J"/>
+                            <constraint firstAttribute="trailing" secondItem="hJX-QI-rXe" secondAttribute="trailing" id="kUE-Og-8qp"/>
+                            <constraint firstItem="hJX-QI-rXe" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="m7a-10-Dy2"/>
+                            <constraint firstItem="mfc-D6-4HJ" firstAttribute="leading" secondItem="Zpd-aJ-njl" secondAttribute="leading" id="oVu-by-2qo"/>
+                            <constraint firstItem="mfc-D6-4HJ" firstAttribute="top" secondItem="jQd-En-w3z" secondAttribute="bottom" constant="8" symbolic="YES" id="snG-fF-gEb"/>
+                            <constraint firstItem="jQd-En-w3z" firstAttribute="leading" secondItem="mfc-D6-4HJ" secondAttribute="leading" id="uuq-xT-D47"/>
+                            <constraint firstItem="Zpd-aJ-njl" firstAttribute="top" secondItem="mfc-D6-4HJ" secondAttribute="bottom" constant="8" symbolic="YES" id="yKy-v4-xnd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressField" destination="jQd-En-w3z" id="AeT-L3-H3g"/>
+                        <outlet property="commentsField" destination="mfc-D6-4HJ" id="xzx-7o-djh"/>
+                        <outlet property="imageView" destination="Zpd-aJ-njl" id="fuf-kW-fbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="462"/>
+        </scene>
+    </scenes>
+</document>
